@@ -1,0 +1,15 @@
+.box {
+
+  display: inline-block;
+  border: solid 4px black;
+  text-align: center;
+  padding: 40px;
+  max-width: 100px;
+  cursor: pointer;
+}
+
+section {
+  border: solid 2px black;
+  padding: 12px;
+  margin-bottom: 18px;
+}
