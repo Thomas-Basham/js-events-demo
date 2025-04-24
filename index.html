@@ -9,6 +9,7 @@
   <body>
     <header>
       <h1>JS Events</h1>
+      <button id="dark-mode-btn">Dark Mode</button>
     </header>
     <main>
       <section>
@@ -42,16 +43,26 @@
           <p>white</p>
         </div>
       </section>
-
       <section>
         <h2 id="login-status">Logged Out</h2>
         <form id="login-form">
           <fieldset>
+            <p id="username-validation"></p>
             <label for="username-input">Username</label>
-            <input type="text" name="username-input" id="username-input" />
+            <input
+              required
+              type="text"
+              name="username-input"
+              id="username-input"
+            />
 
             <label for="password-input">Password</label>
-            <input type="password" name="password-input" id="password-input" />
+            <input
+              required
+              type="password"
+              name="password-input"
+              id="password-input"
+            />
             <button type="submit">Login</button>
           </fieldset>
         </form>

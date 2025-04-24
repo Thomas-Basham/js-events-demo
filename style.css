@@ -1,5 +1,9 @@
-.box {
+.dark {
+  background-color: #121212;
+  color: white;
+}
 
+.box {
   display: inline-block;
   border: solid 4px black;
   text-align: center;
@@ -13,3 +17,17 @@ section {
   padding: 12px;
   margin-bottom: 18px;
 }
+
+#username-validation {
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+header {
+  display: flex ;
+  justify-content: space-between;
+  margin: 12px;
+}
+

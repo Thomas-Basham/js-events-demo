@@ -43,3 +43,34 @@ function loginFormEventHandler(event) {
   loginStatusElement.innerHTML = `Logged in as ${event.target["username-input"].value}`;
   event.target.reset();
 }
+
+// Form Validation
+let usernameValidationElement = document.getElementById("username-validation");
+let usernameInputElement = document.getElementById("username-input");
+
+usernameInputElement.addEventListener("input", handleValidateUsername);
+
+// on input event handler for username input
+function handleValidateUsername(event) {
+  event.preventDefault();
+  loginFormElement.getE;
+  if (event.target.value.length < 5) {
+    usernameValidationElement.innerHTML = "Please enter more than 5 characters";
+    usernameValidationElement.style.backgroundColor = "red";
+    usernameValidationElement.style.color = "white";
+  } else {
+    usernameValidationElement.style.backgroundColor = "green";
+    usernameValidationElement.innerHTML = "✔︎";
+  }
+}
+
+// ******************************************************
+
+// Dark mode / light mode
+let darModeBtnElement = document.getElementById("dark-mode-btn");
+darModeBtnElement.addEventListener("click", handleToggleDarkMode);
+
+function handleToggleDarkMode(event) {
+  event.preventDefault();
+  document.body.classList.toggle("dark");
+}
