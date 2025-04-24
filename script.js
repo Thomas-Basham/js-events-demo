@@ -44,7 +44,7 @@ function loginFormEventHandler(event) {
   event.target.reset();
 }
 
-// Form Validation
+// ******************* Form Validation
 let usernameValidationElement = document.getElementById("username-validation");
 let usernameInputElement = document.getElementById("username-input");
 
