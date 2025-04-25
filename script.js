@@ -73,4 +73,27 @@ darModeBtnElement.addEventListener("click", handleToggleDarkMode);
 function handleToggleDarkMode(event) {
   event.preventDefault();
   document.body.classList.toggle("dark");
+  // console.log(document.body.classList[0]); // dark or undefined
+  // if the body has a class of dark, show 'light mode' on the btn
+  document.body.classList[0] === "dark"
+    ? (darModeBtnElement.innerHTML = "☀️")
+    : (darModeBtnElement.innerHTML = "🌙");
+}
+
+// ternary statements
+// are conditional statements
+let something = false;
+
+// ternary statement
+// what ? true ? false
+// thing to evaluate ? do this if true : do this if false
+something
+  ? console.log("something is true... do this")
+  : console.log("do this if false!");
+
+// we can do the same thing as conditionals
+if (something === true) {
+  console.log("something is true... do this");
+} else if (something === false) {
+  console.log("do this if false!");
 }

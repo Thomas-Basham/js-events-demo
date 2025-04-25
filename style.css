@@ -1,5 +1,8 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
 .dark {
-  background-color: #121212;
+  background-color: #121212 !important;
   color: white;
 }
 
@@ -31,3 +34,7 @@ header {
   margin: 12px;
 }
 
+#dark-mode-btn {
+  font-size: 2em;
+  cursor: pointer;
+}
