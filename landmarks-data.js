@@ -208,12 +208,25 @@ for (let landmark of landmarks) {
   console.log(landmark);
   // create our elements in JS
   const landmarkDivElement = document.createElement("div");
-  const headingElement = document.createElement("h2");
+  const headingElement = document.createElement("h3");
+  const locationDetailsElement = document.createElement("small");
+  const factListElement = document.createElement("ul");
 
-  // add text content to elements
+  // add text or attributes content to elements
+  landmarkDivElement.classList.add("landmark-div");
   headingElement.innerHTML = landmark.name;
+  locationDetailsElement.innerHTML = `${landmark.location.city}, ${landmark.location.country}`;
+  for (let fact of landmark.facts) {
+    let factListItemElement = document.createElement("li");
+    factListItemElement.textContent += fact;
+    factListElement.appendChild(factListItemElement);
+  }
 
   // append child elements to parent elements
+  // parentElement.appendChild(childElement)
   landmarkDivElement.appendChild(headingElement);
+  landmarkDivElement.appendChild(locationDetailsElement);
+  landmarkDivElement.appendChild(factListElement);
+
   landmarksSectionElement.appendChild(landmarkDivElement);
 }
